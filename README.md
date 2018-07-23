@@ -4,10 +4,10 @@
 
 * 开发工具：eclipse2018 3A
 * springboot: **2.0.1.RELEASE**
-* jdk：1.8.0_40
-* maven:3.3.9
+* jdk：1.8.0_161
+* maven:3.5.4
 * alibaba Druid 数据库连接池：1.1.9
-* swagger2：.9.2
+* swagger2：2.9.2
 
 ## 额外功能：
 
