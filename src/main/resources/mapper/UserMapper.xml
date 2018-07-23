@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.snoopy.dao.UserDao">
+	<sql id="BASE_TABLE">
+		t_user
+	</sql>
+
+	<sql id="BASE_COLUMN">
+		userId,userName,password,phone
+	</sql>
+
+	<insert id="insert"
+		parameterType="com.snoopy.model.UserDomain">
+		INSERT INTO
+		<include refid="BASE_TABLE" />
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			userName,password,
+			<if test="phone != null">
+				phone,
+			</if>
+		</trim>
+		<trim prefix="VALUES(" suffix=")" suffixOverrides=",">
+			#{userName, jdbcType=VARCHAR},#{password, jdbcType=VARCHAR},
+			<if test="phone != null">
+				#{phone, jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<select id="selectUsers"
+		resultType="com.snoopy.model.UserDomain">
+		SELECT
+		<include refid="BASE_COLUMN" />
+		FROM
+		<include refid="BASE_TABLE" />
+	</select>
+
+	<insert id="insertMybatisBatch"
+		parameterType="java.util.List" useGeneratedKeys="true"
+		keyProperty="userId">
+		<if test="list != null and list.size()>0">
+			INSERT INTO t_user (
+			<include refid="BASE_COLUMN" />
+			)
+			VALUES
+			<foreach collection="list" item="item" index="index"
+				separator=",">
+				(null,#{item.userName},#{item.password},#{item.phone})
+			</foreach>
+		</if>
+	</insert>
+
+</mapper>
