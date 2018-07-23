@@ -18,3 +18,8 @@
 ![输入图片说明](https://github.com/snoopylovefiona/springboot2-swagger2-mybatis/blob/master/image/swagger2_2.png "在这里输入图片标题")
 ![输入图片说明](https://github.com/snoopylovefiona/springboot2-swagger2-mybatis/blob/master/image/swagger2_3.png "在这里输入图片标题")
 ![输入图片说明](https://github.com/snoopylovefiona/springboot2-swagger2-mybatis/blob/master/image/swagger2_4.png "在这里输入图片标题")
+
+![image](https://github.com/snoopylovefiona/springboot2-swagger2-mybatis/blob/master/image/swagger2_1.png?raw=true)
+![image](https://github.com/snoopylovefiona/springboot2-swagger2-mybatis/blob/master/image/swagger2_2.png?raw=true)
+![image](https://github.com/snoopylovefiona/springboot2-swagger2-mybatis/blob/master/image/swagger2_3.png?raw=true)
+![image](https://github.com/snoopylovefiona/springboot2-swagger2-mybatis/blob/master/image/swagger2_4.png?raw=true)
